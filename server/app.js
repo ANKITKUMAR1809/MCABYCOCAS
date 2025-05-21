@@ -56,7 +56,7 @@ app.use(notificationRouter);
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
-    app.listen(process.env.PORT, () => {
+    app.listen(process.env.PORT ||4000, () => {
       console.log("Connected to MongoDB");
       console.log("Server is running on port " + process.env.PORT);
       console.log("http://localhost:" + process.env.PORT);
